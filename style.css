@@ -1,0 +1,619 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: black;
+    color: white;
+    
+}
+
+/* ------------------------------Header Section-------------------------------*/
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 10%;
+    margin-top: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 10%;
+    margin-top: 0;
+}
+
+.logobox{
+    width: 200px;
+}
+
+.logobox img{
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    display: inline;
+    list-style: none;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.navbar ul li a::after{
+    content: '';
+    background-color: red;
+    width: 0;
+    height: 3px;
+    display: block;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.navbar ul li a:hover::after{
+    width: 100%;
+}
+
+/* ------------------------------------Home section----------------------------------- */
+
+.home-content{
+    flex-basis: 55%;
+    margin-top: 100px;
+    padding-top: 100px;
+    font-size: 18px;
+}
+
+.home-content h3{
+    font-size: 22px;
+    padding-left: 100px;
+    margin-bottom: 10px;
+}
+
+.home-content h1{
+    color: rgb(122, 28, 28);
+    margin-bottom: 10px;
+    font-size: 48px;
+    padding-left: 40px;
+}
+
+.home-img{
+    flex-basis: 35%;
+    margin-top: 120px;
+    width: 350px;
+}
+
+.home-img img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+#home{
+    margin-bottom: 10%;
+}
+
+/* -------------------------------about------------------------ */
+
+#about{
+    background-color: rgb(21, 21, 21);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+.about-row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 10%;
+    margin-top: 0;
+}
+
+.user-img{
+    flex-basis: 35%;
+    width: 200px;
+}
+
+.user-img img{
+    width: 100%;
+}
+
+.subtitle{
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.about-box{
+    flex-basis: 55%;
+    font-size: 18px;
+}
+
+.about-content{
+    padding: 30px 10px;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    display: block;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+/* ---------------------------services--------------------------- */
+
+#services{
+    padding: 10px 5%;
+    margin: 10% 5%;
+    margin-top: 5%;
+}
+
+.services-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 80px; 
+    grid-gap: 30px;
+}
+
+.service{
+    font-size: 18px;
+    padding: 20px 20px;
+    border-radius: 15px;
+    background: rgb(56, 54, 54);
+    transition: background 0.5s transform 0.5s;
+}
+
+.service i{
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+.service h3{
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.service:hover{
+    background: rgb(153, 29, 54);
+    transform: translateY(-10px);
+}
+
+/* ---------------------------portfolio---------------------- */
+
+#portfolio{
+    background-color: rgb(21, 21, 21);
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    padding: 5% 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+}
+
+.work img{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 80%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+    font-size: 16px;
+}
+
+.work:hover .layer{
+    height: 100%;
+ }
+
+ .work:hover img{
+    transform: scale(1.1);
+ }
+
+ .layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+ }
+
+ .layer h3{
+    font-size: 26px;
+    margin-bottom: 15px;
+ }
+
+ /* ---------------------------------------contact-------------------------------------- */
+
+ #contact{
+    padding-top: 5%;
+    padding-bottom: 5%;
+ }
+
+.left-section{
+    flex-basis: 45%;
+}
+
+.left-section h2{
+    margin-bottom: 15%;
+}
+
+.left-section .fa-solid {
+    margin-bottom: 15px;
+    color: #ff004f;
+}
+
+.left-section p{
+    font-size: 20px;
+}
+
+.social-icons{
+    margin: 30px 0;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.5s;
+}
+
+.social-icons a :hover{
+    color: #ff004f;
+    transform: translateY(-4px);
+}
+
+.social-icons .fa-brands{
+    color: white;
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    border-radius: 6px;
+    width: fit-content;
+    background-color: #ff004f;
+    font-size: 18px;
+    padding: 14px 50px;
+    border: 1px solid #ff004f;
+}
+
+.right-section{
+    flex-basis: 45%;
+    padding-right: 5%;
+}
+
+ .contact form{
+    margin-top: 10%;
+    max-width: 500px;
+    margin-bottom: 48px;
+ }
+
+ .input-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+ }
+
+ .input-box input,.input-box textarea {
+    margin: 15px 0;
+    background-color: rgb(43, 41, 41);
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    outline: none;
+ }
+
+ .input-box button{
+    margin-top: 25px;
+ }
+ 
+/* -----------------------------------footer-----------------------------*/
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(33, 32, 32);
+    padding: 10px 10%;
+}
+
+.footer-text{
+    font-size: 18px;
+}
+
+.footer-icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background: #ff004f;
+    border-radius: 8px;
+    transition: 0.5s ease;
+}
+
+.footer-icon a:hover{
+    box-shadow: 0 0 12px #ff004f;
+}
+
+.footer-icon a i{
+    font-size: 18px;
+    color: white;
+}
+
+/* ---------------------------------------css for small screen--------------------------*/
+.navbar i{
+    display: none;
+}
+
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px){
+    .header{
+        padding: 16px 3%;
+    }
+
+    #home{
+        padding: 20px 3%;
+    }
+
+    #services{
+        padding: 30px;
+    }
+
+    #portfolio{
+        padding: 30px 3%;
+    }
+
+    #contact{
+        min-height: auto;
+    }
+
+    .footer{
+        padding: 16px 3%;
+    }
+}
+
+@media (max-width: 768px){
+    #home{
+        flex-direction: column;
+    }
+
+    .home-content h3{
+        font-size: 13px;
+    }
+
+    .home-content h1{
+        font-size: 26px;
+    }
+
+    .home-content{
+        order: 2;
+        margin-top: 10px;    }
+
+    .home-img img{
+        width: 200px;
+        margin-top: 10px;
+    }
+
+    #about{
+        flex-direction: column;
+    }
+
+    .user-img{
+        margin-top: 14px;
+    }
+
+    .subtitle{
+        font-size: 30pxpx;
+    }
+
+    .services-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .portfolio-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+    .work{
+        padding-left: 3%;
+    }
+}
+
+@media (max-width: 600px){
+    .row{
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column; */
+    }
+    .home-content{
+        flex-basis: 100%;
+        font-size: 16px;
+    }
+    .home-content{
+        padding-top: 30px;
+        order: 2;
+    }
+    .home-content h3{
+        font-size: 16px;
+    }
+    .home-img{
+        align-items: center;
+        margin-top: 30px;
+    }
+    .header{
+        padding-left: 5px;
+        padding-right: 25px;
+    }
+    .about-row{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-box,.user-img{
+        flex-basis: 100%;
+    }
+    .about-box{
+        font-size: 15px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right:20px ;
+    }
+    .navbar i{
+        display: block;
+        font-size: 25px;
+    }
+    .navbar ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    .navbar ul li{
+        display: block;
+        margin: 25px;
+    }
+    .navbar ul i{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .user-img{
+        margin-bottom: 30px;
+    }
+    .about-content{
+        padding-top: 5px;
+    }
+    .services-grid{
+        margin-top: 30px;
+        font-size: 16px;
+    }
+    .portfolio {
+        font-size: 40px;
+        margin-left: 25px;
+    }
+    .work{
+        width: 90%;
+    }
+    .left-section,.right-section{
+        flex-basis: 100%;
+    }
+    .left-section{
+        margin-bottom: 20px;
+    }
+    .footer-text{
+        font-size: 14px;
+    }
+    .footer-icon i{
+        font-size: 10px;
+    }
+}
+
